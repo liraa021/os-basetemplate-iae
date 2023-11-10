@@ -1,0 +1,91 @@
+<header>
+		<div id="header" class="container">
+
+			<div  class="row">
+				<?php if ($topmenu): ?>
+				    <div class="top_menu<?php print (($search && $topmenu ) ? ' col-lg-8 col-md-8 col-sm-8 col-xs-12' : ' col-lg-12 col-md-12 col-sm-12 col-xs-12'); ?>">
+						<div id="site-navigation-top" class="navbar" role="navigation">
+							<div class="navbar-header">
+						      <button type="button" class="navbar-toggle" data-toggle="collapse_os" data-target="#top-navbar-collapse">
+						        <i class="fa fa-bars"></i>
+							        <?php if ($this->countModules('Menu_button_text')): ?>
+											<div class="button_text">
+												<jdoc:include type="modules" name="Menu_button_text" style="html5" />
+											</div>
+									<?php endif; ?>
+						      </button>
+						    </div>
+							<div id="top-navbar-collapse" class="collapse_os navbar-collapse navbar-ex1-collapse_os">
+								<jdoc:include type="modules" name="topmenu" style="html5" />
+							</div>
+						</div><!-- #site-navigation -->
+				    </div>
+				  <?php endif; ?>
+				  
+				</div>
+
+			    <?php if ($this->countModules('Top1') || $this->countModules('Top2') || $this->countModules('Top3') || $this->countModules('Top4')): ?>
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<jdoc:include type="modules" name="Top1" style="html5" />
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<jdoc:include type="modules" name="Top2" style="html5" />
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<jdoc:include type="modules" name="Top3" style="html5" />
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<jdoc:include type="modules" name="Top4" style="html5" />
+					</div>
+				</div>
+			    <?php endif; ?>
+
+			    <div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<?php if ( $this->params->get('logo_file') ) { ?>
+                      
+                      	<div id="logo-header" class="col-md-12">
+                          
+                            <div class="col-md-2"></div>
+                            <div class="col-md-2">
+
+                                <div id="logo">
+                                  <a href="<?php echo $this->params->get('logo_link')?>">
+                                      <img src="<?php echo $this->params->get('logo_file')?>" alt="Logo" />
+                                  </a>
+                                </div>
+
+                            </div>
+                        
+                        <div class="col-md-8">
+                        
+                        	<a href="http://beta.iae.cta.br/portaliae" title="Instituto de Aeronáutica e Espaço">
+                        		<span class="portal-title-1">Força Aérea Brasileira</span>
+                        		<h1 class="portal-title corto">Instituto de Aeronáutica e Espaço</h1>
+                        		<span class="portal-description">Departamento de Ciência e Tecnologia Aeroespacial</span>
+                        	</a>
+                        
+                        </div>
+                         
+                        
+                    </div>
+                      
+                      
+						   
+						<?php } ?>
+					</div>
+				<?php if ($this->countModules('Mainmenu')): ?>
+				    <div class="main_menu col-lg-8 col-md-8 col-sm-12 col-xs-12">
+						<nav id="site-navigation-main" class="navbar" role="navigation">
+							<div class="navbar-header">
+						      <button type="button" class="navbar-toggle" data-toggle="collapse_os" data-target="#main-navbar-collapse">
+						        <i class="fa fa-bars"></i>
+							        <?php if ($this->countModules('Menu_button_text')): ?>
+											<div class="button_text">
+												<jdoc:include type="modules" name="Menu_button_text" style="html5" />
+											</div>
+									<?php endif; ?>
+						      </button>
+						    </div>
+							<div id="main-navbar-coll
